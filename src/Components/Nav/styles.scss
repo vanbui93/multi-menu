@@ -1,0 +1,53 @@
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+.dropdown-menu {
+  height: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  text-align: center;
+  li {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    line-height: 35px;
+    text-decoration: none;
+    background: none;
+    &:hover {
+      background: blue;
+      ul {
+        display: block;
+        ul {
+          display: none;
+        }
+      }
+    }
+    a {
+      color: #000000;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+    li {
+      &:hover ul {
+        margin-left: 200px; /*This must be width of menu box*/
+        margin-top: -35px;
+        display: block;
+      }
+    }
+  }
+  ul {
+    position: absolute;
+    display: none;
+  }
+}
+
+.dropdown-submenu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
